@@ -59,12 +59,21 @@ var myShakeEvent = new Shake({
 });
 
 myShakeEvent.start();
+var shaking = false;
 
 window.addEventListener('shake', shakeEventDidOccur, false);
+document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
 
 //function to call when shake occurs
 function shakeEventDidOccur () {
+    shaking = true;
+    setTimeout( function() { shaking = false;} , 1000 );
+}
 
-    //put your own code here etc.
-    alert('shake!');
+
+    
+function onVolumeDownKeyDown() {
+         //put your own code here etc.
+    if(shaking)
+        alert('shake+volume!!');
 }
