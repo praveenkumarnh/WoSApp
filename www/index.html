@@ -7,7 +7,7 @@
 
         <link rel="stylesheet"  href="libs/jQM-flat/jquery.mobile.flatui.css">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-
+        <script src="js/shake.js"></script>
         <title>WoSApp</title>
     </head>
     <body>
@@ -18,7 +18,7 @@
                             <img src="img/logo.png" id="logo"  />
                         </div>
                     <div id="menu">
-                    
+                    <a data-icon="flat-warning" data-theme="d"  data-role="button" onclick="app.startSequence()">PANIC</a>
                         <a data-icon="flat-settings" data-theme="d" href="#second-page" data-role="button">Configure Settings</a>
                        <a data-icon="ms-question" data-theme="g" href="#about-page"  data-role="button" >About</a>
                             
@@ -67,11 +67,36 @@
                     <p>...</p>
                 </div>
             </div>
+            
+            
+            
+                     <div  id="firstrun-page" data-role="page">
+                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <h1>Settings Form</h1>
+                </div>
+                <div data-role="content" >
+                    <form  id="search-form" action="">
+                        <label for="address">Your Name</label>
+                        <input type="text" name="address" id="address" data-mini="true" placeholder="Jhoto"/>
+                        <label for="text1">Mobile Number<span class="small-text">(optional)</span></label>
+                        <input type="number" name="text1" id="dentist" data-mini="true" placeholder="Pikachu"/>
+
+                        <button type="submit" data-theme="f" data-mini="false" class="ui-btn-hidden" aria-disabled="false">Search</button>
+                    </form>
+                </div>
+                
+            </div>
+            
+            
         </div>
+        
+
+            
+            
 
 
         <script type="text/javascript" src="libs/fastclick.min.js"></script>
-        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="libs/jquery-2.0.3.min.js"></script>
         <script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.3.2.min.js"></script>
 
