@@ -1,2 +1,2 @@
 # WoSApp
-NITK Women Safety App Repo
+NITK Women's Safety App Repo
